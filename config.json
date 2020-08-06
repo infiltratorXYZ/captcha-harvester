@@ -1,5 +1,6 @@
 {
 	"sitekey": "6LeoeSkTAAAAAA9rkZs5oS82l69OEYjKRZAiKdaF",
 	"url": "nrml.ca",
-	"port": 3000
+	"port": 3000,
+    "browser": "firefox"
 }

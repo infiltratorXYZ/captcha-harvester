@@ -11,6 +11,7 @@ var website = {
 	sitekey: cfg['sitekey'],
 	url: cfg['url'],
 	port: cfg['port'],
+    browser: cfg['browser'],
     gResponse: 'Solve captcha'
 }
 
@@ -97,6 +98,6 @@ hostile.set('::1', 'captcha.' + website.url, function (err) {
 	if (err) {
 		console.error(err)
 	} else {
-        open('http://captcha.' + website.url + ':' + website.port);
+        open('http://captcha.' + website.url + ':' + website.port, {app: website.browser});
 	}
 })
