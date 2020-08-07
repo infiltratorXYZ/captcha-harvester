@@ -5,12 +5,14 @@ const app = express();
 const hostile = require('hostile')
 const fs = require('fs');
 
-var cfg = require('./config.json')
+//var cfg = require('./config.json');
+const jsonString = fs.readFileSync('./config.json')
+const cfg = JSON.parse(jsonString)
 
 var website = {
-	sitekey: cfg['sitekey'],
-	url: cfg['url'],
-	port: cfg['port'],
+    sitekey: cfg['sitekey'],
+    url: cfg['url'],
+    port: cfg['port'],
     browser: cfg['browser'],
     gResponse: 'Solve captcha'
 }
